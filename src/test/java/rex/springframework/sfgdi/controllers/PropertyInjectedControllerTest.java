@@ -1,11 +1,8 @@
 package rex.springframework.sfgdi.controllers;
 
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import rex.springframework.sfgdi.services.GreetingServiceImpl;
-
-import static org.junit.jupiter.api.Assertions.*;
+import rex.springframework.sfgdi.services.ConstructorGreetingService;
 
 class PropertyInjectedControllerTest {
 
@@ -15,7 +12,7 @@ class PropertyInjectedControllerTest {
     void setUp(){
         controller = new PropertyInjectedController();
 
-    controller.greetingService = new GreetingServiceImpl();
+    controller.greetingService = new ConstructorGreetingService();
     }
 
     @Test
